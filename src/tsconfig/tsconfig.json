@@ -1,0 +1,8 @@
+{
+  // 继承基础配置
+  "extends":"./tsconfig.base",
+  // 覆盖基础配置
+  "exclude": [],
+  // 保存时自动编译(atom支持，vscode不支持)
+  "compileOnSave": true,
+}

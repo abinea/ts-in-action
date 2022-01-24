@@ -5,7 +5,8 @@
 // import './function'
 // import './class'
 // import './generics'
-import './advanced'
+// import './type/type-assertions'
+import './module/es6-import'
 
-let hello: string = 'Hello TypeScript'
+export let hello: string = 'Hello TypeScript'
 document.querySelectorAll('.app')[0].innerHTML = hello
