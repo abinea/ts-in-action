@@ -50,7 +50,7 @@ let nu: null = null
 let voidFn = () => {}
 
 // any 任意类型，相当于js
-let x
+let Any
 
 //never 永远不会有返回值的类型
 let errFn = () => {

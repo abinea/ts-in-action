@@ -106,7 +106,7 @@ enum G {
 }
 
 let e: E = 3
-let f: F = 3
+export let f: F = 3
 console.log(e) // 3
 
 // e===f // 报错，不同类型无法比较
