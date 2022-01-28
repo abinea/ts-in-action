@@ -2,14 +2,18 @@
 
 // html-webpack-plugin 通过模板生成首页并把输出文件嵌入首页文件中
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   // 入口文件
-  entry: './src/index.ts',
+  entry: {
+    app: './src/react/index.tsx',
+  },
   output: {
     // 输出文件
-    filename: 'app.js',
+    filename: '[name].[chunkhash:8].js',
     // 输出目录采用默认的 dist
+    path: path.resolve(__dirname, '../', 'dist'),
   },
   resolve: {
     //拓展名
@@ -36,4 +40,10 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
+  // 拆包
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 }
